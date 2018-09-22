@@ -1,0 +1,89 @@
+body {
+  max-width: 1000px;
+  margin: 100px auto; /*top right bottom left*/
+  line-height: 24px;
+  /* background: url(images/bg.jpg); */
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* # is used to target div with custom id */
+.row{
+  -webkit-display: flex;
+  display: flex;
+}
+
+.column{
+  padding: 20px;
+}
+
+/* a column class which also has an additional class side */
+.column.side{
+  flex: 1;
+}
+
+.column.middle{
+  flex: 2;
+}
+
+
+.spin{
+  margin-right: 20px;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: rgb(243, 33, 255);
+  /*red green blue*/
+  margin: 0 0 16px 0;
+  padding: 0 0 18px 0;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+a {
+  color: rgb(255, 209, 59);
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom-style: solid;
+  color: black;
+}
+
+ul {
+  margin: 0 0 32px 17px;
+}
+
+li {
+  color: rgb(6, 204, 163);
+}
+
+/* when viewport of device becomes 600px or less */
+@media (max-width: 600px){
+  /* change flex direction to column */
+  .row{
+    flex-direction: column;
+  }
+
+  img{
+    display: none;
+  }
+
+  #title{
+    text-align: center;
+  }
+}
