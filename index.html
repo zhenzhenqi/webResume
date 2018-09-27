@@ -3,64 +3,74 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <title>resume</title>
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="custom.css">
 </head>
 <!--end of head section-->
 
 <body>
-  <div class="row">
-    <div class="column">
-      <img src="images/profile.gif" width="200" height="auto">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/carousel/la.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="images/carousel/chicago.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="images/carousel/ny.jpg">
+      </div>
     </div>
 
-    <div id="title" class="column">
-      <h1>ZZQ</h1>
-      <p>have fun and carry on</p>
-    </div>
-
-  </div>
-
-  <!-- begining of flex section -->
-  <div class="row">
-    <div class="column side">
-      <h1>Education</h1>
-      <h2>Wrote a cyberbunk fiction on pissing in the universe</h2>
-      <p><strong>Major:</strong> 10th dimention<br/>
-        <strong>Minor:</strong> daydreaming</p>
-    </div>
-
-    <div class="column middle">
-      <h1>Skills</h1>
-      <h2>Office Skills</h2>
-      <p>Adobe Creative Suite. Data Management. Event Organizations.</p>
-
-      <h2>Computer Skills</h2>
-      <p>HTML, CSS, JAVASCRIPT, C#, PHYTHON, MySQL, MAX MSP, LOGIC PRO</p>
-    </div>
-
-    <div class="column side">
-      <h1>Experience</h1>
-      <h2>Super Mario Odyssey Overlord</h2>
-      <ul>
-        <li>been to every single kingdom in Super Mario</li>
-        <li>fought a bosses multiple times because bored</li>
-        <li>bought every single souvenier in every kingdom</li>
-      </ul>
-    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
   </div>
 
 
-  <div class="footer">
-    <p><i class="fas fa-smile fa-lg spin"></i><a href="http://zhenzhenqi.com">zhenzhenqi.com</a></p>
-    <p><i class="fas fa-kiwi-bird fa-lg spin"></i><a href="mailto:zhenzhenqi@gmail.com">zhenzhenqi@gmail.com</a></p>
+
+  <div class="container text-center">
+    <h3>THE BAND</h3>
+    <p>We love music!</p>
+    <p>WE have created a fake band site.</p>
   </div>
 
+<div class="row">
+  <div class="col-sm-4">
+    <p><strong>NAME</strong></p>
+    <img class="rounded-circle person" src="/images/giphy.gif">
+  </div>
+  <div class="col-sm-4">
+    <p><strong>NAME</strong></p>
+    <img class="rounded-circle person" src="/images/giphy.gif">
+  </div>
+  <div class="col-sm-4">
+    <p><strong>NAME</strong></p>
+    <img class="rounded-circle person" src="/images/giphy.gif">
+  </div>
+</div>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>
