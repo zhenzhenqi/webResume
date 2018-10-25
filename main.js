@@ -1,3 +1,68 @@
+//*****************************************************************************//
+//*****************************************************************************//
+//***************************bio background color******************************//
+//*****************************************************************************//
+//*****************************************************************************//
+var bio = document.querySelector("#intro h1");
+var body = document.getElementById("gradient");
+
+function updateBg() {
+	var r = Math.floor(Math.random()*255);
+	var g = Math.floor(Math.random()*255);
+	var	b = Math.floor(Math.random()*255);
+
+	bio.style.color="rgb("+r+","+g+","+b+")"+document.bgColor;
+}
+setInterval(updateBg, Math.floor(Math.random()*200+60));
+
+//*****************************************************************************//
+//*****************************************************************************//
+//***************************body background gradient**************************//
+//*****************************************************************************//
+//*****************************************************************************//
+
+var c1_1 = 0;
+var c1_2 = 0;
+var c1_3 = 0;
+var c2_1 = 255;
+var c2_2 = 255;
+var c2_3 = 255;
+var color1 = 'rgb('+c1_1+','+c1_2+','+c1_3+')';
+var color2 = 'rgb('+c2_1+','+c2_2+','+c2_3+')';
+var style = document.createElement('style');
+style.type = 'text/css';
+var counter = 0;
+
+style.innerHTML = '.cssClass'+counter+'{ background-image: linear-gradient('+color1+','+color2+'); transition: all 0.45s; }';
+document.getElementsByTagName('head')[0].appendChild(style);
+
+
+body.className = 'cssClass'+counter;
+
+function swapBg(){
+	counter++;
+
+	c1_1 = Math.floor(Math.random()*255);
+	c1_2 = Math.floor(Math.random()*255);
+	c1_3 = Math.floor(Math.random()*255);
+	c2_1 = Math.floor(Math.random()*255);
+	c2_2 = Math.floor(Math.random()*255);
+	c2_3 = Math.floor(Math.random()*255);
+
+	color1 = 'rgb('+c1_1+','+c1_2+','+c1_3+')';
+	color2 = 'rgb('+c2_1+','+c2_2+','+c2_3+')';
+
+	style.innerHTML = '.cssClass'+counter+' { background-image: linear-gradient(to bottom right,'+color1+','+color2+');}';
+	document.getElementsByTagName('head')[0].appendChild(style);
+	body.className = 'cssClass'+counter;
+}
+setInterval(swapBg, 1000); //1000 milisecond is 1 second
+
+//*****************************************************************************//
+//*****************************************************************************//
+//***************************carousel******************************************//
+//*****************************************************************************//
+//*****************************************************************************//
 // Used to add a numeric id on slide creation to let us target the element later
 var slideIndex = 0;
 // Tells us which slide we are on
@@ -6,8 +71,7 @@ var currentSlideIndex = 0;
 var slideArray = [];
 
 
-
-// Template for creating a custom Slide object
+// define class for creating a custom Slide object
 function Slide(title, subtitle, background, link ) {
 	this.title = title;
 	this.subtitle = subtitle;
@@ -20,7 +84,6 @@ function Slide(title, subtitle, background, link ) {
 	// Add this Slide to our array
 	slideArray.push(this);
 }
-
 
 // Creating our slide objects, you can make as many as you want
 var walkingDead = new Slide(
@@ -46,12 +109,12 @@ var LastMan = new Slide(
 
 
 /*-----------------------------------------------------------------
------------------------------------------------------------------
------------------------ ADD TO WEB PAGE ---------------------------
------------------------------------------------------------------
+-------------------------------------------------------------------
+----------------------- build slider content ----------------------
+-------------------------------------------------------------------
 -----------------------------------------------------------------*/
 function buildSlider(){
-	// A variable to hold all our HTML
+	// A variable to hold our HTML
 	var myHTML;
 
 	// Go through the Array and add the code to our HTML
@@ -59,7 +122,7 @@ function buildSlider(){
 		myHTML += "<div id='" + slideArray[i].id +
 		"' class='singleSlide' style='background-image:url(" + slideArray[i].background + ");'>" +
 		"<div class='slideOverlay'>" +
-		"<h1>" + slideArray[i].title + "</h1>" +
+		"<h2>" + slideArray[i].title + "</h1>" +
 		"<h4>" + slideArray[i].subtitle + "</h4>" +
 		"<a href='" + slideArray[i].link + "' target='_blank'>Open Link</a>" +
 		"</div>" +
